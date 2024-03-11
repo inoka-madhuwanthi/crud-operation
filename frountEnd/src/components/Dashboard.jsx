@@ -1,5 +1,5 @@
 // Dashboard.jsx
-import React from 'react';
+// import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import './style.css';
@@ -31,6 +31,12 @@ const Dashboard = () => {
                 <Link to="/dashboard/category" className="nav-link px-0 align-middle text-white">
                   <i className="fs-4 bi-columns ms-2"></i>
                   <span className="ms-2 d-none d-sm-inline">User categories</span>
+                </Link>
+              </li>
+              <li className="w-150">
+                <Link to="/dashboard/addEvents" className="nav-link px-0 align-middle text-white">
+                  <i className="fs-4 bi-columns ms-2"></i>
+                  <span className="ms-2 d-none d-sm-inline">Add User Events</span>
                 </Link>
               </li>
               <li className="w-150">
