@@ -9,6 +9,7 @@ import Category from './components/Category';
 import Users from './components/users';
 import Addcategory from './components/Addcategory';
 import Adduser from './components/Adduser';
+import Edituser from './components/Edituser';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='category' element={<Category />} />
           <Route path='addcategory' element={<Addcategory />} />
           <Route path='adduser' element={<Adduser />} />
+          <Route path='/dashboard/edituser/:id' element={<Edituser />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -11,7 +11,7 @@ const Dashboard = () => {
         <div className=" colum col-auto col-md-4 col-xl-3 px-sm-4 px-0 " style={{ backgroundColor: 'black' }}>
           <div className="d-flex flex-column align-items-center align-items-sm-start px-5 pt-4 text-white min-vh-100">
             <Link to="/dashboard" className="d-flex align-items-center pb-5 mb-md-3 mt-md-4 me-md-auto text-white text-decoration-none">
-              <span className="fs-2 fw-bolder d-none d-sm-inline" style={{ fontFamily:'sans-serif', color:'purple' }}>Admin Area</span>
+              <span className="fs-2 fw-bolder d-none d-sm-inline" style={{ fontFamily:'sans-serif', color:'#4789cf' }}>Admin Area</span>
             </Link>
 
             <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
@@ -43,7 +43,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="col p-2 m-4">
-          <div className=" p-4 d-flex justify-content-center shadow " style={{backgroundColor:'lightblue'}}>
+          <div className=" p-2  d-flex justify-content-center shadow " style={{backgroundColor:'lightblue'}}>
             <h4>User Management System</h4>
           </div>
           <Outlet />

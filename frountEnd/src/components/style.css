@@ -38,6 +38,12 @@ label {
     font-weight: bold;
 }
 
+.toggle-password-icon{
+    color: #9b2a41;
+    margin-right: 4%;
+    margin-top: 3%;
+}
+
 input[type="email"],
 input[type="password"] {
     width: 100%;
@@ -45,6 +51,7 @@ input[type="password"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    
 }
 
 button {
@@ -85,6 +92,10 @@ button:hover {
     justify-content: center;
 }
 
+.mb-3{
+    border-radius: 15px;
+}
+
 .container-fluid{
     background-color: #b19393;
     background-color: aquamarine;
@@ -95,4 +106,82 @@ button:hover {
     background-size: cover;
     
 }
+.imageemployee{
+    width: 50px;
+    height: 65px;
+    border-radius: 60%;
+    border-color: #3b0f0f;
+}
 
+
+.home-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    right:0cm;
+    
+    
+  }
+  
+  .home-content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(7, 6, 6);
+    text-align: center;
+  }
+  
+  .popup-toggle {
+    background-color: #4f99e7;
+    color: rgb(5, 1, 1);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popup {
+    position: fixed;
+    text-align: left;
+    top: 190%;
+    left: 50%;
+    bottom: 50;
+    transform: translate(-50%, -50%);
+    background-color: rgba(149, 133, 219, 0.8);
+    padding: 20px;
+    width: 300px;
+    border-radius: 20px;
+    animation: popupFadeIn 0.3s ease-in-out forwards;
+  }
+  
+  .close-popup {
+    background-color: #c44c64;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  @keyframes popupFadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.7);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+ .homescreen{
+left: 10%;
+ }
+
+ .p-2{
+    width: 1025px;
+ }
+ 
+ .loginForm{
+    margin-top: 3%;
+ }
