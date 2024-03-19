@@ -1,6 +1,5 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-// import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
@@ -16,7 +15,7 @@ const modalStyle = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 500,
+  width: 650,
   bgcolor: "background.paper",
   boxShadow: 24,
   p: 4,
@@ -42,13 +41,13 @@ function DataModal({ modalData, open, onClose, onDataAdded }) {
   return (
     <div>
       <Modal open={open} onClose={onClose} >
-        <Paper sx={modalStyle} style={{background:'#d8fbfa'}}>
+        <Paper sx={modalStyle}>
           <Stack gap={1}>
             <Typography variant="h6" component="h2">
               Select a timeframe
             </Typography>
 
-            <Stack direction="row" gap={1}>
+            <Stack direction="row" gap={5}>
               <BasicTimePicker
                 initialTime={data.startTime}
                 label="start time"
