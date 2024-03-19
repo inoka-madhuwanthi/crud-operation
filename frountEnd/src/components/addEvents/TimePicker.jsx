@@ -2,7 +2,7 @@ import { useState } from "react";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { TimePicker } from "@mui/x-date-pickers/TimePicker";
+import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { useEffect } from "react";
 import PropTypes from "prop-types";
 
@@ -23,8 +23,8 @@ function BasicTimePicker({
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DemoContainer components={["TimePicker"]}>
-        <TimePicker
+      <DemoContainer components={["DateTimePicker"]}>
+        <DateTimePicker
           minTime={minTime}
           label={label}
           value={value}

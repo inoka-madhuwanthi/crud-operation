@@ -9,7 +9,7 @@ import Category from './components/Category';
 import Users from './components/users';
 import Addcategory from './components/Addcategory';
 import Adduser from './components/Adduser';
-import AddEvents from './routes/AddEvents';
+import AddEvents from './routes/Addevents';
 
 function App() {
   return (

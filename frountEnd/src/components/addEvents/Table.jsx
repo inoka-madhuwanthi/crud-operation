@@ -1,4 +1,4 @@
-// import * as React from "react";
+
 import PropTypes from "prop-types";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -12,31 +12,34 @@ import IconButton from "@mui/material/IconButton";
 import dayjs from "dayjs";
 
 
+
 function DataTable({ data, onEdit, onDelete }) {
+  
   return (
     <TableContainer >
       <Table>
-        <TableHead style={{background:"#bcb"}}>
+        <TableHead style={{background:"#bcb"}} >
           <TableRow>
-            <TableCell>Start time</TableCell>
-            <TableCell>End time</TableCell>
-            <TableCell>Description</TableCell>
+            <TableCell style={{ minWidth: 100 }}>Start time</TableCell>
+            <TableCell style={{ minWidth: 100 }}>End time</TableCell>
+            <TableCell style={{ minWidth: 200 }}>Description</TableCell>
             <TableCell></TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
-          {data.map((row, index) => (
+        <TableBody >
+          {data
+          .map((row, index) => (
             <TableRow key={index}>
-              <TableCell>{dayjs(row.startTime).format("h:mm A")}</TableCell>
-              <TableCell>{dayjs(row.endTime).format("h:mm A")}</TableCell>
-              <TableCell>{row.description}</TableCell>
+              <TableCell style={{ minWidth: 100 }}>{dayjs(row.startTime).format("h:mm A")}</TableCell>
+              <TableCell style={{ minWidth: 100 }}>{dayjs(row.endTime).format("h:mm A")}</TableCell>
+              <TableCell style={{ minWidth: 200 }}>{row.description}</TableCell>
 
-              <TableCell>
-                <IconButton onClick={() => onEdit(index)}>
+              <TableCell style={{ minWidth: 50 }}>
+                <IconButton onClick={() => onEdit(index)} style={{ maxWidth: 40 }}>
                   <EditIcon color="primary" />
                 </IconButton>
 
-                <IconButton onClick={() => onDelete(index)}>
+                <IconButton onClick={() => onDelete(index)} style={{ maxWidth: 40 }}>
                   <DeleteIcon color="error" />
                 </IconButton>
               </TableCell>
@@ -44,6 +47,7 @@ function DataTable({ data, onEdit, onDelete }) {
           ))}
         </TableBody>
       </Table>
+      
     </TableContainer>
   );
 }
@@ -51,7 +55,7 @@ function DataTable({ data, onEdit, onDelete }) {
 DataTable.propTypes = {
   onDelete: PropTypes.func.isRequired, 
   onEdit: PropTypes.func.isRequired,   
-  data: PropTypes.object.isRequired,  
+  data: PropTypes.array.isRequired,  
 };
 
 export default DataTable;
